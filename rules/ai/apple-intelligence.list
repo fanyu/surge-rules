@@ -1,0 +1,13 @@
+# NAME: apple-intelligence
+# OWNER: fanyu
+# MANAGED: self-hosted Apple Intelligence rules
+# SOURCES: manual
+# TOTAL: 7
+
+DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,apple-relay.mask.apple-dns.net

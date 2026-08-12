@@ -1,0 +1,16 @@
+# NAME: proxy
+# OWNER: fanyu
+# MANAGED: self-hosted manual proxy overrides
+# TOTAL: 6
+
+# 后台/官网国内直连打不开；DNS 被投毒时会被 GEOIP,CN 误判成 DIRECT，
+# 这里用域名规则抢在 GEOIP 之前命中，不触发解析。
+# 注意只写 tailscale.com，不要加 ts.net —— 那是 tailnet 内部域名，
+# 解析到 100.64/10 由 Tailscale 自己接管，走代理会坏掉。
+DOMAIN-SUFFIX,tailscale.com
+
+DOMAIN,sub.store
+DOMAIN-SUFFIX,136135.xyz
+DOMAIN,sub-store.vercel.app
+DOMAIN-SUFFIX,s1.trojanflare.one
+DOMAIN-SUFFIX,hermchats.com

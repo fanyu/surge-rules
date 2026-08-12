@@ -1,0 +1,9 @@
+# NAME: figma
+# OWNER: fanyu
+# MANAGED: self-hosted Figma platform rules
+# SOURCES: blackmatrix7, manual
+# TOTAL: 3
+
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,figma.io
+DOMAIN-SUFFIX,figcdn.com

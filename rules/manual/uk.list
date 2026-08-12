@@ -1,0 +1,7 @@
+# NAME: uk
+# OWNER: fanyu
+# MANAGED: self-hosted manual UK-specific overrides
+# TOTAL: 2
+
+DOMAIN-SUFFIX,gmcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX,giffgaff.com

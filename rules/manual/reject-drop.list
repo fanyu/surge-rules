@@ -1,0 +1,12 @@
+# NAME: reject-drop
+# OWNER: fanyu
+# MANAGED: self-hosted manual REJECT-DROP overrides
+# TOTAL: 1
+#
+# 用途：静默丢包（不是立即返回失败），专治「被拒绝后立刻高频重试」的客户端。
+# adblock.list 走的是 AdBlock -> reject-tinygif，对没开 MITM 的 HTTPS
+# 只能直接断开，App 收到秒失败就秒重试，会打出请求风暴、耗电、并冲掉请求日志。
+# 引用这份列表的 RULE-SET 必须排在 adblock.list 之前，否则抢不到。
+
+# 百度统计：抖音内嵌 SDK，实测 ~10 次/秒（2026-08-12）
+DOMAIN-SUFFIX,bdurl.net

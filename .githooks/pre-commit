@@ -1,0 +1,29 @@
+#!/bin/sh
+# 与 .github/workflows/guard-sensitive-files.yml 同一套规则，但跑在 commit 之前。
+# CI 只能在 push 之后拦，那时东西已经在公网上了（2026-08-12 就这么泄露过一次）。
+set -eu
+
+staged="$(git diff --cached --name-only --diff-filter=ACMR)"
+[ -n "$staged" ] || exit 0
+
+blocked='(^|/)(subscriptions/|geoip/|domainsets/|\.audit-backups/|.*\.conf$|.*\.iosinterface$|.*\.tar\.gz$|.*\.mobileconfig$|.*\.p12$)'
+if echo "$staged" | grep -qE "$blocked"; then
+  echo "pre-commit: 敏感路径被拦下 ——"
+  echo "$staged" | grep -E "$blocked" | sed 's/^/  /'
+  exit 1
+fi
+
+# 只扫暂存区的内容，不扫工作区
+pattern='(token=[A-Za-z0-9._%-]{8,}|authorization:[[:space:]]*(bearer|basic)|private-key[[:space:]]*=|psk=|tskey-auth-|vmess://|vless://|trojan://|ss://|ssr://|sub\.store/download|/sub\?token=)'
+fail=0
+for f in $staged; do
+  # 本文件和 CI guard 自身含特征串，跳过
+  case "$f" in
+    .githooks/pre-commit|.github/workflows/guard-sensitive-files.yml) continue ;;
+  esac
+  if git show ":$f" 2>/dev/null | grep -qaE "$pattern"; then
+    echo "pre-commit: $f 含疑似凭据"
+    fail=1
+  fi
+done
+[ "$fail" -eq 0 ] || { echo "如确认是误报，用 git commit --no-verify 跳过。"; exit 1; }

@@ -1,0 +1,33 @@
+name: Guard Sensitive Files
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Block sensitive paths
+        run: |
+          set -euo pipefail
+          blocked_paths='(^|/)(subscriptions/|geoip/|domainsets/|.*\.conf$|.*\.iosinterface$)'
+          if git ls-files | grep -E "$blocked_paths" >/dev/null; then
+            echo "Blocked sensitive path detected."
+            git ls-files | grep -E "$blocked_paths"
+            exit 1
+          fi
+
+      - name: Block credential-like content
+        run: |
+          set -euo pipefail
+          pattern='(token=[A-Za-z0-9._%-]{8,}|authorization:[[:space:]]*(bearer|basic)|private-key[[:space:]]*=|psk=|tskey-auth-|vmess://|vless://|trojan://|ss://|ssr://|sub\.store/download|/sub\?token=)'
+          # 排除守卫自身：这两个文件的 pattern 里含 vmess:// 等特征串，否则每次都会自己命中自己
+          files="$(git ls-files | grep -vE '^(\.github/workflows/guard-sensitive-files\.yml|\.githooks/pre-commit)$')"
+          if [ -n "$files" ] && grep -R -n -I -E "$pattern" $files; then
+            echo "Blocked credential-like content detected."
+            exit 1
+          fi
