@@ -5,7 +5,7 @@
 在配置改成 SF:: 或策略组改名后就失效了。
 只改本来就有 icon-url 的组；没有的保持没有。
 """
-import os, re, sys
+import os, re, sys, time
 
 SETS = ["lucide", "lucide-card", "lucide-thin", "lucide-thin-card",
         "lucide-color", "lucide-color-card", "default", "sf"]
@@ -37,10 +37,14 @@ def norm(name):
 
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in SETS:
-        sys.exit(f"用法: {sys.argv[0]} <{'|'.join(SETS)}> [conf]")
-    s = sys.argv[1]
-    conf = sys.argv[2] if len(sys.argv) > 2 else os.path.expanduser(
+    argv = [a for a in sys.argv[1:] if a != "--bust"]
+    # 图标内容变了但文件名没变时，Surge 可能还在用本地缓存。
+    # 加个时间戳查询串换掉 URL，强制它重新下载。
+    bust = f"?t={int(time.time())}" if "--bust" in sys.argv else ""
+    if not argv or argv[0] not in SETS:
+        sys.exit(f"用法: {sys.argv[0]} <{'|'.join(SETS)}> [conf] [--bust]")
+    s = argv[0]
+    conf = argv[1] if len(argv) > 1 else os.path.expanduser(
         "~/Library/Mobile Documents/iCloud~com~nssurge~inc/Documents/Surge-optimized.conf")
     sub = "" if s == "default" else f"{s}/"
 
@@ -56,7 +60,7 @@ def main():
         if s == "sf":
             new = f"SF::{NAME2SF[key]}" if key in NAME2SF else None
         else:
-            new = f"{BASE}/{sub}{NAME2ICON[key]}.png" if key in NAME2ICON else None
+            new = f"{BASE}/{sub}{NAME2ICON[key]}.png{bust}" if key in NAME2ICON else None
         if new is None:
             continue
         lines[i] = re.sub(r"icon-url ?= ?\"?[^,\"]+\"?", f"icon-url={new}", line)
