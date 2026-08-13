@@ -1,7 +1,7 @@
 #!/bin/zsh
 # 切换 Surge 配置里的图标集：./switch-icons.sh <图标集目录名|default> [配置文件]
 set -e
-SETS=(lucide lucide-card lucide-color lucide-color-card default)
+SETS=(lucide lucide-card lucide-thin lucide-thin-card lucide-color lucide-color-card default)
 SET="${1:?用法: $0 <${(j:|:)SETS}> [conf]}"
 (($SETS[(Ie)$SET])) || { echo "未知图标集: $SET (可选: ${(j:, :)SETS})" >&2; exit 1; }
 CONF="${2:-$HOME/Library/Mobile Documents/iCloud~com~nssurge~inc/Documents/Surge-optimized.conf}"
