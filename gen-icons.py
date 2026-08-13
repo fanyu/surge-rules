@@ -16,7 +16,7 @@ SIMPLE_RAW = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{}.svg"
 ICONS = {
     "proxy":              ("shield-check",  None,               "#0A84FF"),
     "oracle":             ("database",      ("si", "oracle"),   "#F80000"),
-    "ai":                 ("brain-circuit", None,               "#AF52DE"),
+    "ai":                 ("sparkles",      None,               "#AF52DE"),
     "aiproxy":            ("bot",           None,               "#BF5AF2"),
     "siri":               ("SF:siri",       "SIRI",             "#AF52DE"),
     "apple":              ("apple",         ("si", "apple"),    "#000000"),
