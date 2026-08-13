@@ -37,6 +37,15 @@ ICONS = {
     "cf-worker":          ("cloud",         ("si", "cloudflare"), None),
 }
 
+# 官方品牌色是黑的几个，在暗色模式下等于看不见，彩色版单独换个画法。
+#   stripes = 苹果 1977 年那版六色条纹；si/line = 换个能看清的颜色重画
+COLOR_FIX = {
+    "apple":   ("stripes", "apple",   None),
+    "github":  ("si",      "github",  "#6E5494"),   # Octocat 紫
+    "twitter":  ("line",    "twitter", "#1DA1F2"),   # SI 13 已无 twitter，用 Lucide 的鸟
+}
+APPLE_STRIPES = ["#61BB46", "#FDB827", "#F5821F", "#E03A3E", "#963D97", "#009DDC"]
+
 S, PAD, RADIUS = 400, 58, 88
 
 
@@ -86,6 +95,20 @@ def gradient_tint(path, stops):
         d.line([(i, 0), (0, i)], fill=c + (255,))
     grad.putalpha(g.getchannel("A"))
     grad.save(path)
+
+
+def stripes_tint(path, colors):
+    """按 alpha 遮罩涂成横向等宽色条，用于苹果那版六色 logo。"""
+    g = Image.open(path).convert("RGBA")
+    box = g.getchannel("A").getbbox()            # 只在字形高度上分条，不算空白边
+    top, bot = box[1], box[3]
+    bands = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(bands)
+    h = (bot - top) / len(colors)
+    for i, c in enumerate(colors):
+        d.rectangle([0, round(top + i * h), S, round(top + (i + 1) * h)], fill=c)
+    bands.putalpha(g.getchannel("A"))
+    bands.save(path)
 
 
 def microsoft_squares(path):
@@ -151,7 +174,17 @@ def main():
 
         # 彩色版
         out = f"{dirs['lucide-color']}/{name}.png"
-        if color_src == "MSGRID":
+        if name in COLOR_FIX:
+            kind, slug2, fill = COLOR_FIX[name]
+            if kind == "line":
+                svg_to_png(build_line(name, slug2, 2).replace('stroke="#000000"', f'stroke="{fill}"'), out)
+            else:
+                s = fetch(SIMPLE_RAW.format(slug2))
+                s = s.replace("<svg", f'<svg fill="{fill or "#000000"}"', 1)
+                svg_to_png(s, out)
+                if kind == "stripes":
+                    stripes_tint(out, APPLE_STRIPES)
+        elif color_src == "MSGRID":
             microsoft_squares(out)
         elif color_src:
             try:
