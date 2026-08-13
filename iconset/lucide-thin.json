@@ -1,0 +1,82 @@
+{
+ "name": "fanyu · lucide-thin",
+ "description": "细线条 · 纯黑",
+ "icons": [
+  {
+   "name": "AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/adblock.png"
+  },
+  {
+   "name": "AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/ai.png"
+  },
+  {
+   "name": "Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple.png"
+  },
+  {
+   "name": "Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple_intelligence.png"
+  },
+  {
+   "name": "Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/brokers.png"
+  },
+  {
+   "name": "Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/cf-worker.png"
+  },
+  {
+   "name": "Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/figma.png"
+  },
+  {
+   "name": "GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/github.png"
+  },
+  {
+   "name": "Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/home.png"
+  },
+  {
+   "name": "Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/line-a.png"
+  },
+  {
+   "name": "Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/line-b.png"
+  },
+  {
+   "name": "Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/microsoft.png"
+  },
+  {
+   "name": "Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/oracle.png"
+  },
+  {
+   "name": "Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/proxy.png"
+  },
+  {
+   "name": "Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/spotify.png"
+  },
+  {
+   "name": "Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/tailscale.png"
+  },
+  {
+   "name": "Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/telegram.png"
+  },
+  {
+   "name": "Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/twitter.png"
+  },
+  {
+   "name": "YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/youtube.png"
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+ "name": "fanyu · 全部",
+ "description": "六套合一，前缀区分",
+ "icons": [
+  {
+   "name": "L · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/adblock.png"
+  },
+  {
+   "name": "L · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/ai.png"
+  },
+  {
+   "name": "L · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/apple.png"
+  },
+  {
+   "name": "L · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/apple_intelligence.png"
+  },
+  {
+   "name": "L · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/brokers.png"
+  },
+  {
+   "name": "L · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/cf-worker.png"
+  },
+  {
+   "name": "L · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/figma.png"
+  },
+  {
+   "name": "L · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/github.png"
+  },
+  {
+   "name": "L · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/home.png"
+  },
+  {
+   "name": "L · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/line-a.png"
+  },
+  {
+   "name": "L · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/line-b.png"
+  },
+  {
+   "name": "L · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/microsoft.png"
+  },
+  {
+   "name": "L · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/oracle.png"
+  },
+  {
+   "name": "L · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/proxy.png"
+  },
+  {
+   "name": "L · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/spotify.png"
+  },
+  {
+   "name": "L · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/tailscale.png"
+  },
+  {
+   "name": "L · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/telegram.png"
+  },
+  {
+   "name": "L · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/twitter.png"
+  },
+  {
+   "name": "L · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/youtube.png"
+  },
+  {
+   "name": "L-card · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/adblock.png"
+  },
+  {
+   "name": "L-card · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/ai.png"
+  },
+  {
+   "name": "L-card · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/apple.png"
+  },
+  {
+   "name": "L-card · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-card · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/brokers.png"
+  },
+  {
+   "name": "L-card · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/cf-worker.png"
+  },
+  {
+   "name": "L-card · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/figma.png"
+  },
+  {
+   "name": "L-card · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/github.png"
+  },
+  {
+   "name": "L-card · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/home.png"
+  },
+  {
+   "name": "L-card · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/line-a.png"
+  },
+  {
+   "name": "L-card · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/line-b.png"
+  },
+  {
+   "name": "L-card · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/microsoft.png"
+  },
+  {
+   "name": "L-card · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/oracle.png"
+  },
+  {
+   "name": "L-card · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/proxy.png"
+  },
+  {
+   "name": "L-card · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/spotify.png"
+  },
+  {
+   "name": "L-card · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/tailscale.png"
+  },
+  {
+   "name": "L-card · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/telegram.png"
+  },
+  {
+   "name": "L-card · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/twitter.png"
+  },
+  {
+   "name": "L-card · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/youtube.png"
+  },
+  {
+   "name": "L-thin · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/adblock.png"
+  },
+  {
+   "name": "L-thin · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/ai.png"
+  },
+  {
+   "name": "L-thin · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple.png"
+  },
+  {
+   "name": "L-thin · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple_intelligence.png"
+  },
+  {
+   "name": "L-thin · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/brokers.png"
+  },
+  {
+   "name": "L-thin · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/cf-worker.png"
+  },
+  {
+   "name": "L-thin · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/figma.png"
+  },
+  {
+   "name": "L-thin · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/github.png"
+  },
+  {
+   "name": "L-thin · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/home.png"
+  },
+  {
+   "name": "L-thin · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/line-a.png"
+  },
+  {
+   "name": "L-thin · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/line-b.png"
+  },
+  {
+   "name": "L-thin · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/microsoft.png"
+  },
+  {
+   "name": "L-thin · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/oracle.png"
+  },
+  {
+   "name": "L-thin · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/proxy.png"
+  },
+  {
+   "name": "L-thin · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/spotify.png"
+  },
+  {
+   "name": "L-thin · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/tailscale.png"
+  },
+  {
+   "name": "L-thin · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/telegram.png"
+  },
+  {
+   "name": "L-thin · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/twitter.png"
+  },
+  {
+   "name": "L-thin · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/youtube.png"
+  },
+  {
+   "name": "L-thin-card · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/adblock.png"
+  },
+  {
+   "name": "L-thin-card · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/ai.png"
+  },
+  {
+   "name": "L-thin-card · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/apple.png"
+  },
+  {
+   "name": "L-thin-card · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-thin-card · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/brokers.png"
+  },
+  {
+   "name": "L-thin-card · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/cf-worker.png"
+  },
+  {
+   "name": "L-thin-card · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/figma.png"
+  },
+  {
+   "name": "L-thin-card · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/github.png"
+  },
+  {
+   "name": "L-thin-card · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/home.png"
+  },
+  {
+   "name": "L-thin-card · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/line-a.png"
+  },
+  {
+   "name": "L-thin-card · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/line-b.png"
+  },
+  {
+   "name": "L-thin-card · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/microsoft.png"
+  },
+  {
+   "name": "L-thin-card · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/oracle.png"
+  },
+  {
+   "name": "L-thin-card · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/proxy.png"
+  },
+  {
+   "name": "L-thin-card · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/spotify.png"
+  },
+  {
+   "name": "L-thin-card · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/tailscale.png"
+  },
+  {
+   "name": "L-thin-card · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/telegram.png"
+  },
+  {
+   "name": "L-thin-card · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/twitter.png"
+  },
+  {
+   "name": "L-thin-card · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/youtube.png"
+  },
+  {
+   "name": "L-color · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/adblock.png"
+  },
+  {
+   "name": "L-color · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/ai.png"
+  },
+  {
+   "name": "L-color · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/apple.png"
+  },
+  {
+   "name": "L-color · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/apple_intelligence.png"
+  },
+  {
+   "name": "L-color · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/brokers.png"
+  },
+  {
+   "name": "L-color · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/cf-worker.png"
+  },
+  {
+   "name": "L-color · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/figma.png"
+  },
+  {
+   "name": "L-color · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/github.png"
+  },
+  {
+   "name": "L-color · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/home.png"
+  },
+  {
+   "name": "L-color · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/line-a.png"
+  },
+  {
+   "name": "L-color · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/line-b.png"
+  },
+  {
+   "name": "L-color · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/microsoft.png"
+  },
+  {
+   "name": "L-color · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/oracle.png"
+  },
+  {
+   "name": "L-color · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/proxy.png"
+  },
+  {
+   "name": "L-color · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/spotify.png"
+  },
+  {
+   "name": "L-color · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/tailscale.png"
+  },
+  {
+   "name": "L-color · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/telegram.png"
+  },
+  {
+   "name": "L-color · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/twitter.png"
+  },
+  {
+   "name": "L-color · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/youtube.png"
+  },
+  {
+   "name": "L-color-card · AdBlock",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/adblock.png"
+  },
+  {
+   "name": "L-color-card · AI",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/ai.png"
+  },
+  {
+   "name": "L-color-card · Apple",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/apple.png"
+  },
+  {
+   "name": "L-color-card · Apple Intelligence",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-color-card · Brokers",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/brokers.png"
+  },
+  {
+   "name": "L-color-card · Cloudflare",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/cf-worker.png"
+  },
+  {
+   "name": "L-color-card · Figma",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/figma.png"
+  },
+  {
+   "name": "L-color-card · GitHub",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/github.png"
+  },
+  {
+   "name": "L-color-card · Home",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/home.png"
+  },
+  {
+   "name": "L-color-card · Link",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/line-a.png"
+  },
+  {
+   "name": "L-color-card · Globe",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/line-b.png"
+  },
+  {
+   "name": "L-color-card · Microsoft",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/microsoft.png"
+  },
+  {
+   "name": "L-color-card · Oracle",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/oracle.png"
+  },
+  {
+   "name": "L-color-card · Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/proxy.png"
+  },
+  {
+   "name": "L-color-card · Spotify",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/spotify.png"
+  },
+  {
+   "name": "L-color-card · Tailscale",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/tailscale.png"
+  },
+  {
+   "name": "L-color-card · Telegram",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/telegram.png"
+  },
+  {
+   "name": "L-color-card · Twitter",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/twitter.png"
+  },
+  {
+   "name": "L-color-card · YouTube",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/youtube.png"
+  }
+ ]
+}
