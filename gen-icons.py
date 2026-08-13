@@ -18,6 +18,7 @@ ICONS = {
     "oracle":             ("database",      ("si", "oracle"),   "#F80000"),
     "ai":                 ("brain-circuit", None,               "#AF52DE"),
     "aiproxy":            ("bot",           None,               "#BF5AF2"),
+    "siri":               ("SF:siri",       "SIRI",             "#AF52DE"),
     "apple":              ("apple",         ("si", "apple"),    "#000000"),
     "apple_intelligence": ("sparkles",      None,               "#FF375F"),
     "brokers":            ("trending-up",   None,               "#34C759"),
@@ -52,6 +53,41 @@ def svg_to_png(svg, path):
     os.unlink(tmp)
 
 
+def sf_symbol(sym, weight, path):
+    """SF Symbols 只在 macOS 上有，靠 sfrender.swift 渲染。"""
+    subprocess.run(["swift", os.path.join(ROOT, "sfrender.swift"),
+                    os.path.dirname(path), weight, "#000000",
+                    f"{os.path.basename(path)[:-4]}:{sym}"],
+                   check=True, capture_output=True)
+    # Retina 下 NSImage 按 backing scale 输出 800×800，且字形只占画布约 60%，
+    # 与 Lucide 的 0.83~0.92 不匹配。裁到字形边界后统一重排到 S×S。
+    im = Image.open(path).convert("RGBA")
+    box = im.getchannel("A").getbbox()
+    im = im.crop(box)
+    target = round(S * 0.86)
+    k = target / max(im.size)
+    im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+    canvas = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    canvas.paste(im, ((S - im.width) // 2, (S - im.height) // 2), im)
+    canvas.save(path)
+
+
+def gradient_tint(path, stops):
+    """把已渲染的黑色字形按 alpha 遮罩涂成对角渐变，用于 Siri 那种多色标识。"""
+    g = Image.open(path).convert("RGBA")
+    grad = Image.new("RGBA", (S, S))
+    d = ImageDraw.Draw(grad)
+    n = len(stops) - 1
+    for i in range(S * 2):                      # 沿对角线扫描
+        t = i / (S * 2 - 1) * n
+        k = min(int(t), n - 1)
+        f = t - k
+        c = tuple(round(stops[k][j] + (stops[k + 1][j] - stops[k][j]) * f) for j in range(3))
+        d.line([(i, 0), (0, i)], fill=c + (255,))
+    grad.putalpha(g.getchannel("A"))
+    grad.save(path)
+
+
 def microsoft_squares(path):
     """Simple Icons 因商标要求下架了微软图标，按官方四色手绘。"""
     im = Image.new("RGBA", (S, S), (0, 0, 0, 0))
@@ -84,7 +120,22 @@ def main():
     for d in dirs.values():
         os.makedirs(d, exist_ok=True)
 
+    # Siri 的官方渐变：粉 → 紫 → 蓝
+    SIRI_STOPS = [(255, 45, 85), (175, 82, 222), (10, 132, 255)]
+
     for name, (slug, color_src, tint) in ICONS.items():
+        if slug.startswith("SF:"):              # SF Symbols，笔画靠 weight 控制
+            sym = slug[3:]
+            sf_symbol(sym, "regular", f"{dirs['lucide']}/{name}.png")
+            sf_symbol(sym, "ultraLight", f"{dirs['lucide-thin']}/{name}.png")
+            sf_symbol(sym, "regular", f"{dirs['lucide-color']}/{name}.png")
+            gradient_tint(f"{dirs['lucide-color']}/{name}.png", SIRI_STOPS)
+            card(f"{dirs['lucide']}/{name}.png",       f"{dirs['lucide-card']}/{name}.png",       (244, 244, 246, 255))
+            card(f"{dirs['lucide-thin']}/{name}.png",  f"{dirs['lucide-thin-card']}/{name}.png",  (244, 244, 246, 255))
+            card(f"{dirs['lucide-color']}/{name}.png", f"{dirs['lucide-color-card']}/{name}.png", (255, 255, 255, 255))
+            print(f"  {name} (SF Symbols)")
+            continue
+
         # lucide: 品牌用 Simple Icons 实心 logo（涂黑），通用图标用 Lucide 线条
         is_brand = isinstance(color_src, tuple)
         if is_brand:

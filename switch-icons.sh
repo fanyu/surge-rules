@@ -13,7 +13,8 @@ BASE="https://raw.githubusercontent.com/fanyu/surge-rules/main/icons"
 perl -pi -e "s{icon-url=https://static\.figma\.com/[^,\s]+}{icon-url=$BASE/figma.png};
              s{icon-url=https://www\.apple\.com/[^,\s]+}{icon-url=$BASE/apple_intelligence.png};
              s{icon-url ?= ?\"B1::Household::Smart Home\"}{icon-url=$BASE/home.png};
-             s{icon-url ?= ?\"?B1::Logos::Apple Music Lyrics\"?}{icon-url=$BASE/apple_intelligence.png};
+             s{icon-url ?= ?\"?B1::Logos::Apple Music Lyrics\"?}{icon-url=$BASE/siri.png};
+             s{^((?:AppleAI|Siri) = \N*icon-url=)\Q$BASE\E/(?:[\w-]+/)?[\w.-]+\.png}{\$1$BASE/siri.png};
              s{^(\N*AIProxy = (?:(?!icon-url)\N)*)\$}{\$1, icon-url=$BASE/aiproxy.png};
              s{\Q$BASE\E/(?:[\w-]+/)?([\w.-]+\.png)}{$BASE/$DIR\$1}g" "$CONF"
 grep -c "$BASE/$DIR" "$CONF"

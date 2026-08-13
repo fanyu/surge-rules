@@ -63,6 +63,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/proxy.png"
   },
   {
+   "name": "L · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/siri.png"
+  },
+  {
    "name": "L · Spotify",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/spotify.png"
   },
@@ -141,6 +145,10 @@
   {
    "name": "L-card · Proxy",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/proxy.png"
+  },
+  {
+   "name": "L-card · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/siri.png"
   },
   {
    "name": "L-card · Spotify",
@@ -223,6 +231,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/proxy.png"
   },
   {
+   "name": "L-thin · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/siri.png"
+  },
+  {
    "name": "L-thin · Spotify",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/spotify.png"
   },
@@ -301,6 +313,10 @@
   {
    "name": "L-thin-card · Proxy",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/proxy.png"
+  },
+  {
+   "name": "L-thin-card · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/siri.png"
   },
   {
    "name": "L-thin-card · Spotify",
@@ -383,6 +399,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/proxy.png"
   },
   {
+   "name": "L-color · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/siri.png"
+  },
+  {
    "name": "L-color · Spotify",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/spotify.png"
   },
@@ -461,6 +481,10 @@
   {
    "name": "L-color-card · Proxy",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/proxy.png"
+  },
+  {
+   "name": "L-color-card · Siri",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/siri.png"
   },
   {
    "name": "L-color-card · Spotify",
