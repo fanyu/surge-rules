@@ -46,7 +46,12 @@ COLOR_FIX = {
 }
 APPLE_STRIPES = ["#61BB46", "#FDB827", "#F5821F", "#E03A3E", "#963D97", "#009DDC"]
 
-S, PAD, RADIUS = 400, 58, 88
+S, RADIUS = 400, 88
+# 各家源图的留白不一致：Lucide 的 24 viewBox 自带内边距(字形约占 0.92)，
+# Simple Icons 的字形顶满 24(占 1.00)，混在一起就是有的顶格有的缩着。
+# 统一裁到字形边界再按固定占比重排，图标才像一套的。
+COVER, CARD_COVER = 0.76, 0.58
+PAD = round(S * (1 - CARD_COVER / COVER) / 2)
 
 
 def fetch(url):
@@ -62,23 +67,28 @@ def svg_to_png(svg, path):
     os.unlink(tmp)
 
 
+def normalize(path, cover=COVER):
+    """裁到字形边界，按长边占 cover 重排到 S×S 居中。
+
+    顺带解决 SF Symbols 的两个问题：Retina 下 NSImage 按 backing scale
+    输出 800×800，以及字形只占画布约 60%。
+    """
+    im = Image.open(path).convert("RGBA")
+    im = im.crop(im.getchannel("A").getbbox())
+    k = S * cover / max(im.size)
+    im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+    canvas = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    canvas.paste(im, ((S - im.width) // 2, (S - im.height) // 2), im)
+    canvas.save(path)
+
+
 def sf_symbol(sym, weight, path):
     """SF Symbols 只在 macOS 上有，靠 sfrender.swift 渲染。"""
     subprocess.run(["swift", os.path.join(ROOT, "sfrender.swift"),
                     os.path.dirname(path), weight, "#000000",
                     f"{os.path.basename(path)[:-4]}:{sym}"],
                    check=True, capture_output=True)
-    # Retina 下 NSImage 按 backing scale 输出 800×800，且字形只占画布约 60%，
-    # 与 Lucide 的 0.83~0.92 不匹配。裁到字形边界后统一重排到 S×S。
-    im = Image.open(path).convert("RGBA")
-    box = im.getchannel("A").getbbox()
-    im = im.crop(box)
-    target = round(S * 0.86)
-    k = target / max(im.size)
-    im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
-    canvas = Image.new("RGBA", (S, S), (0, 0, 0, 0))
-    canvas.paste(im, ((S - im.width) // 2, (S - im.height) // 2), im)
-    canvas.save(path)
+    normalize(path)
 
 
 def gradient_tint(path, stops):
@@ -196,6 +206,8 @@ def main():
         else:
             svg_to_png(build_line(name, slug, 2).replace('stroke="#000000"', f'stroke="{tint}"'), out)
 
+        for d in ("lucide", "lucide-thin", "lucide-color"):
+            normalize(f"{dirs[d]}/{name}.png")
         card(f"{dirs['lucide']}/{name}.png",       f"{dirs['lucide-card']}/{name}.png",       (244, 244, 246, 255))
         card(f"{dirs['lucide-thin']}/{name}.png",  f"{dirs['lucide-thin-card']}/{name}.png",  (244, 244, 246, 255))
         card(f"{dirs['lucide-color']}/{name}.png", f"{dirs['lucide-color-card']}/{name}.png", (255, 255, 255, 255))
