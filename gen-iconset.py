@@ -12,7 +12,7 @@ SETS = {
     "lucide-color":      "彩色 · 透明底",
     "lucide-color-card": "彩色 · 白底圆角",
 }
-LABEL = {"proxy":"Proxy","oracle":"Oracle","ai":"AI","apple":"Apple",
+LABEL = {"aiproxy":"AI Proxy","proxy":"Proxy","oracle":"Oracle","ai":"AI","apple":"Apple",
          "apple_intelligence":"Apple Intelligence","brokers":"Brokers",
          "microsoft":"Microsoft","github":"GitHub","twitter":"Twitter",
          "youtube":"YouTube","telegram":"Telegram","spotify":"Spotify",

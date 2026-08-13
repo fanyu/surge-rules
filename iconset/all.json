@@ -11,6 +11,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/ai.png"
   },
   {
+   "name": "L · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/aiproxy.png"
+  },
+  {
    "name": "L · Apple",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/apple.png"
   },
@@ -85,6 +89,10 @@
   {
    "name": "L-card · AI",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/ai.png"
+  },
+  {
+   "name": "L-card · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/aiproxy.png"
   },
   {
    "name": "L-card · Apple",
@@ -163,6 +171,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/ai.png"
   },
   {
+   "name": "L-thin · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/aiproxy.png"
+  },
+  {
    "name": "L-thin · Apple",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple.png"
   },
@@ -237,6 +249,10 @@
   {
    "name": "L-thin-card · AI",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/ai.png"
+  },
+  {
+   "name": "L-thin-card · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/aiproxy.png"
   },
   {
    "name": "L-thin-card · Apple",
@@ -315,6 +331,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/ai.png"
   },
   {
+   "name": "L-color · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/aiproxy.png"
+  },
+  {
    "name": "L-color · Apple",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/apple.png"
   },
@@ -389,6 +409,10 @@
   {
    "name": "L-color-card · AI",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/ai.png"
+  },
+  {
+   "name": "L-color-card · AI Proxy",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/aiproxy.png"
   },
   {
    "name": "L-color-card · Apple",
