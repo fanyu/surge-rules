@@ -23,6 +23,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/apple_intelligence.png"
   },
   {
+   "name": "L · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/banks.png"
+  },
+  {
    "name": "L · Brokers",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide/brokers.png"
   },
@@ -105,6 +109,10 @@
   {
    "name": "L-card · Apple Intelligence",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-card · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-card/banks.png"
   },
   {
    "name": "L-card · Brokers",
@@ -191,6 +199,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/apple_intelligence.png"
   },
   {
+   "name": "L-thin · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/banks.png"
+  },
+  {
    "name": "L-thin · Brokers",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin/brokers.png"
   },
@@ -273,6 +285,10 @@
   {
    "name": "L-thin-card · Apple Intelligence",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-thin-card · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-thin-card/banks.png"
   },
   {
    "name": "L-thin-card · Brokers",
@@ -359,6 +375,10 @@
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/apple_intelligence.png"
   },
   {
+   "name": "L-color · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/banks.png"
+  },
+  {
    "name": "L-color · Brokers",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color/brokers.png"
   },
@@ -441,6 +461,10 @@
   {
    "name": "L-color-card · Apple Intelligence",
    "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/apple_intelligence.png"
+  },
+  {
+   "name": "L-color-card · Banks",
+   "url": "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons/lucide-color-card/banks.png"
   },
   {
    "name": "L-color-card · Brokers",

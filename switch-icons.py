@@ -15,7 +15,8 @@ BASE = "https://raw.githubusercontent.com/fanyu/surge-rules/main/icons"
 NAME2ICON = {
     "proxy": "proxy", "oracle": "oracle", "home": "home", "ai": "ai",
     "siriai": "siri", "siri": "siri", "appleai": "siri",
-    "apple": "apple", "brokers": "brokers", "microsoft": "microsoft",
+    "apple": "apple", "brokers": "brokers", "banks": "banks", "bank": "banks",
+    "microsoft": "microsoft",
     "github": "github", "figma": "figma", "twitter": "twitter",
     "youtube": "youtube", "telegram": "telegram", "spotify": "spotify",
     "aiproxy": "aiproxy", "shadowsocks": "line-a", "adblock": "adblock",
@@ -27,7 +28,8 @@ NAME2SF = {
     "proxy": "waveform", "oracle": "capsule", "home": "homekit",
     "ai": "sparkles", "siriai": "lasso.and.sparkles", "siri": "lasso.and.sparkles",
     "appleai": "lasso.and.sparkles", "apple": "apple.logo",
-    "brokers": "arrow.uturn.up.square", "aiproxy": "carbon.monoxide.cloud",
+    "brokers": "arrow.uturn.up.square", "banks": "building.columns",
+    "bank": "building.columns", "aiproxy": "carbon.monoxide.cloud",
 }
 
 
@@ -44,8 +46,12 @@ def main():
     if not argv or argv[0] not in SETS:
         sys.exit(f"用法: {sys.argv[0]} <{'|'.join(SETS)}> [conf] [--bust]")
     s = argv[0]
-    conf = argv[1] if len(argv) > 1 else os.path.expanduser(
-        "~/Library/Mobile Documents/iCloud~com~nssurge~inc/Documents/Surge-optimized.conf")
+    default_conf = os.path.expanduser(
+        "~/Library/Mobile Documents/iCloud~com~nssurge~inc/Documents/Surge.conf")
+    if not os.path.exists(default_conf):
+        default_conf = os.path.expanduser(
+            "~/Library/Mobile Documents/iCloud~com~nssurge~inc/Documents/Surge-optimized.conf")
+    conf = argv[1] if len(argv) > 1 else default_conf
     sub = "" if s == "default" else f"{s}/"
 
     lines = open(conf, encoding="utf-8").read().split("\n")

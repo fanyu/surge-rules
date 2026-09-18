@@ -13,7 +13,7 @@ SETS = {
     "lucide-color-card": "彩色 · 白底圆角",
 }
 LABEL = {"aiproxy":"AI Proxy","siri":"Siri","proxy":"Proxy","oracle":"Oracle","ai":"AI","apple":"Apple",
-         "apple_intelligence":"Apple Intelligence","brokers":"Brokers",
+         "apple_intelligence":"Apple Intelligence","brokers":"Brokers","banks":"Banks",
          "microsoft":"Microsoft","github":"GitHub","twitter":"Twitter",
          "youtube":"YouTube","telegram":"Telegram","spotify":"Spotify",
          "adblock":"AdBlock","home":"Home","tailscale":"Tailscale",
@@ -22,7 +22,7 @@ LABEL = {"aiproxy":"AI Proxy","siri":"Siri","proxy":"Proxy","oracle":"Oracle","a
 def entries(s, prefix=""):
     d = os.path.join(ROOT, "icons", s)
     return [{"name": prefix + LABEL.get(f[:-4], f[:-4]), "url": f"{BASE}/{s}/{f}"}
-            for f in sorted(os.listdir(d)) if f.endswith(".png")]
+            for f in sorted(os.listdir(d)) if f.endswith(".png") and f != "bank.png"]
 
 out = os.path.join(ROOT, "iconset")
 os.makedirs(out, exist_ok=True)

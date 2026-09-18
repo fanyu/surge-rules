@@ -3,7 +3,7 @@
 
 依赖: rsvg-convert (brew install librsvg), Pillow
 """
-import json, os, subprocess, tempfile, urllib.request
+import json, os, shutil, subprocess, sys, tempfile, urllib.request
 from PIL import Image, ImageDraw
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -22,6 +22,7 @@ ICONS = {
     "apple":              ("apple",         ("si", "apple"),    "#000000"),
     "apple_intelligence": ("sparkles",      None,               "#FF375F"),
     "brokers":            ("trending-up",   None,               "#34C759"),
+    "banks":              ("landmark",      None,               "#E5A000"),
     "microsoft":          ("layout-grid",   "MSGRID",           "#00A4EF"),
     "github":             ("github",        ("si", "github"),   None),
     "twitter":            ("twitter",       ("si", "x"),        None),
@@ -156,7 +157,8 @@ def main():
     # Siri 的官方渐变：粉 → 紫 → 蓝
     SIRI_STOPS = [(255, 45, 85), (175, 82, 222), (10, 132, 255)]
 
-    for name, (slug, color_src, tint) in ICONS.items():
+    items = {k: ICONS[k] for k in sys.argv[1:]} if len(sys.argv) > 1 else ICONS
+    for name, (slug, color_src, tint) in items.items():
         if slug.startswith("SF:"):              # SF Symbols，笔画靠 weight 控制
             sym = slug[3:]
             sf_symbol(sym, "regular", f"{dirs['lucide']}/{name}.png")
@@ -212,6 +214,11 @@ def main():
         card(f"{dirs['lucide-thin']}/{name}.png",  f"{dirs['lucide-thin-card']}/{name}.png",  (244, 244, 246, 255))
         card(f"{dirs['lucide-color']}/{name}.png", f"{dirs['lucide-color-card']}/{name}.png", (255, 255, 255, 255))
         print(f"  {name}")
+        if name == "banks":
+            for d in dirs.values():
+                shutil.copy2(f"{d}/banks.png", f"{d}/bank.png")
+            shutil.copy2(f"{dirs['lucide-color']}/banks.png", f"{ROOT}/icons/banks.png")
+            shutil.copy2(f"{dirs['lucide-color']}/banks.png", f"{ROOT}/icons/bank.png")
 
     print(f"{len(ICONS)} 个图标 × 6 套")
 
