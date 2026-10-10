@@ -14,6 +14,7 @@ SIMPLE_RAW = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons/{}.svg"
 # 名字 -> (线条版 lucide slug, 彩色版来源, 通用图标配色)
 #   彩色版来源: ("si", slug) 用官方品牌色 / None 表示沿用线条版并上色
 ICONS = {
+    "apns":               ("bell-ring",     None,               "#FF9500"),
     "proxy":              ("shield-check",  None,               "#0A84FF"),
     "oracle":             ("database",      ("si", "oracle"),   "#F80000"),
     "ai":                 ("sparkles",      None,               "#AF52DE"),
