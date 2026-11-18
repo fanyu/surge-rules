@@ -2,7 +2,7 @@
 # OWNER: fanyu
 # MANAGED: self-hosted general AI rules
 # SOURCES: manual, ai_skk.list, copilot.list
-# TOTAL: 101
+# TOTAL: 102
 
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,openai.com
@@ -61,6 +61,7 @@ DOMAIN,api.msn.com
 DOMAIN,api.statsig.com
 DOMAIN,assets.msn.com
 DOMAIN,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,datadoghq.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net
 DOMAIN,copilot.microsoft.com
 DOMAIN,gateway.bingviz.microsoft.net
