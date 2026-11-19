@@ -2,7 +2,7 @@
 # OWNER: fanyu
 # MANAGED: self-hosted general AI rules
 # SOURCES: manual, ai_skk.list, copilot.list
-# TOTAL: 102
+# TOTAL: 106
 
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,openai.com
@@ -50,6 +50,10 @@ DOMAIN,api.jetbrains.ai
 DOMAIN-SUFFIX,openart.ai
 DOMAIN-SUFFIX,jasper.ai
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claude.app
+DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,dify.ai
 DOMAIN-SUFFIX,x.ai
